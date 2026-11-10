@@ -1,0 +1,171 @@
+body { 
+    font-family: system-ui, sans-serif; 
+    background:#f3f5f4; 
+    margin:0; 
+    padding:24px; 
+    color:#1d2b25; 
+}
+  .card { 
+    max-width:520px; 
+    margin:auto; 
+    background:#fff; 
+    border-radius:14px; 
+    padding:24px; 
+    box-shadow:0 2px 12px rgba(0,0,0,.08); 
+}
+  h1 {
+     font-size:1.3rem; 
+     margin:0 0 4px; 
+}
+  p.sub { 
+    margin:0 0 18px; 
+    color:#5b6b63; 
+    font-size:.9rem; 
+}
+  label { 
+    display:block; 
+    font-size:.85rem; 
+    margin:12px 0 4px; 
+    font-weight:600; 
+}
+  select, input, button { 
+    width:100%; 
+    padding:10px; 
+    border:1px solid #c9d3ce; 
+    border-radius:8px; 
+    font-size:1rem; 
+    box-sizing:border-box; 
+}
+  button { 
+    background:#1f7a55; 
+    color:#fff; 
+    border:none; 
+    margin-top:16px; 
+    cursor:pointer; 
+    font-weight:600; 
+}
+  button:hover { 
+    background:#18634a; 
+}
+  .row { 
+    display:flex; 
+    gap:10px; 
+} 
+  .row > div { 
+    flex:1; 
+}
+  .error { 
+    background:#fdecea; 
+    color:#a32a1e; 
+    padding:10px; 
+    border-radius:8px; 
+    margin-top:16px; 
+}
+  .result { 
+    margin-top:20px; 
+    text-align:center; 
+}
+  .deg { 
+    font-size:2rem; 
+    font-weight:700; 
+    color:#1f7a55; 
+}
+  /* Kompas: jarum diputar sesuai derajat kiblat dari utara */
+  .compass { 
+    position:relative; 
+    width:200px; 
+    height:200px; 
+    margin:16px auto; 
+    border:3px solid #1f7a55; 
+    border-radius:50%; 
+    background:#f8fbf9; 
+}
+  .compass span { 
+    position:absolute; 
+    font-weight:700; 
+    font-size:.8rem; 
+}
+  .n { 
+    top:4px; 
+    left:50%; 
+    transform:translateX(-50%); 
+} 
+   .s { 
+    bottom:4px; 
+    left:50%; 
+    transform:translateX(-50%); 
+}
+  .e { 
+    right:8px; 
+    top:50%; 
+    transform:translateY(-50%); 
+} 
+  .w { 
+    left:8px; 
+    top:50%; 
+    transform:translateY(-50%); 
+}
+  .needle { 
+    position:absolute; 
+    left:50%; 
+    top:50%; 
+    width:0; 
+    height:0; 
+}
+  .needle::before { 
+    content:""; 
+    position:absolute; 
+    left:-7px; 
+    top:-80px; 
+    border-left:7px solid transparent; 
+    border-right:7px solid transparent; 
+    border-bottom:80px solid #c0392b; 
+}
+  .needle::after { 
+    content:""; 
+    position:absolute; 
+    left:-7px; 
+    top:0; 
+    border-left:7px solid transparent; 
+    border-right:7px solid transparent; 
+    border-top:50px solid #9aa7a0; }
+  small { color:#5b6b63; }
+
+  .btn-loc {
+    background: #fff;
+    color: #1f7a55;
+    border: 1px solid #1f7a55;
+    margin: 0 0 4px;
+}
+.btn-loc:hover { background: #eef7f2; }
+.btn-loc:disabled { opacity: .6; cursor: wait; }
+#loc-status { font-size: .85rem; color: #5b6b63; margin: 6px 0 4px; }
+
+/* Kompas dinamis */
+.needle {
+    transition: transform 0.12s linear;
+    transform-origin: center center;
+}
+
+.btn-compass {
+    background: #1f7a55;
+    color: white;
+    border: none;
+    margin-top: 12px;
+}
+
+.btn-compass:hover {
+    background: #18634a;
+}
+
+.btn-compass:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#compass-status {
+    font-size: 0.85rem;
+    color: #5b6b63;
+    margin-top: 8px;
+    text-align: center;
+}
